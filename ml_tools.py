@@ -34,7 +34,7 @@ def lin_reg(df):
     if (rul_p > 0) and (rul_p < rul_t):
         rul = rul_p
     else:
-        rul = rul_p
+        rul = rul_t
     return(rul)
 
 
