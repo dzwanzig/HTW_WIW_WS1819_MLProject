@@ -1,13 +1,11 @@
 # HTW_WIW_WS1819_MLProject
 ## Table of Contents  
 
-
-
-[Codes](#Codes)
-
-[Project Description](#Project Description)  
+[Project Description](#Project description)  
  
 [File list](#File list)
+
+[Codes](#Codes)
 
 [Simulation](#Simulation)
 
@@ -27,7 +25,7 @@
 
 <a name="headers"/>
 
-## Project Description
+## Project description
 
 Im Rahmen eines WIW-Projekts zum Thema Predictive Maintenance an der HTW Berlin) wurde eine Gruppe von Studenten in zwei Teams unterteilt: Team Prediction und Team App. Ersteres war dafür zuständig, Maschinendaten zu simulieren und mittels ML-Methoden zu analysieren. Für die Visualisierung in einer App, wurden die Simulations- und Analysedaten dem App Team per Datenbanken zur Verfügung gestellt. 
 
