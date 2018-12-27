@@ -8,13 +8,9 @@
 [Analysen](###Analysen)
 [Datenbanken](##Datenbanken)
 [Installation](##Installation)
-
 [Lizensierung](##Lizensierung)
-
 [Tests](##Tests)
-
 [Acknowledgments](##Acknowledgments)
-
 [Kontaktinformationen](##Kontaktinformationen)
 <a name="headers"/>
 ## Project Description
