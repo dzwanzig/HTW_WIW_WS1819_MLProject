@@ -26,11 +26,18 @@
 <a name="headers"/>
 
 ## Project description
+Im Rahmen eines WIW-Projekts an der HTW-Berlin (Wintersemester 18/19), wurden das Thema Predictive Maintenance behnadelt. Ziel war es, ein gesamtheitliches Verständnis zu dem Thema zu gewinnen und Anwendungen von Machine Learning Methoden sowie einen App-Prototypen zu entwickeln.
+Die Projektgruppe wurde in zwei Teams aufgeteilt: Team Prediction (tp) und Team App (ta). Um ein agiles Projektmanagement und regelmäßige Abstimmungen in und zwischen den Teams zu gewährleisten, wurde sich an dem Modell von Scrum orientiert.
+
+Projektdurchführung:
+Scrum
+
 
 Im Rahmen eines WIW-Projekts zum Thema Predictive Maintenance an der HTW Berlin) wurde eine Gruppe von Studenten in zwei Teams unterteilt: Team Prediction und Team App. Ersteres war dafür zuständig, Maschinendaten zu simulieren und mittels ML-Methoden zu analysieren. Für die Visualisierung in einer App, wurden die Simulations- und Analysedaten dem App Team per Datenbanken zur Verfügung gestellt. 
 
  
 ![alt text](https://github.com/Hawky12/HTW_WIW_WS1819_MLProject/blob/master/Aufteilung%20der%20Teams.PNG?raw=true)
+Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
 Die entwickelten Codes des Teams Prediction können verwendet werden, um die Simulation und ML-Analysen im eigenen Programm live zu nehmen.
 
