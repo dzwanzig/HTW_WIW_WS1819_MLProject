@@ -48,7 +48,7 @@ Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
 ## Erläuterungen zu den Codes
 
-### Simulation
+### Simulationsdaten (tp_helper.py)
 Um Analysen nach ML-Methoden durchführen zu können, müssen vorab Maschinendaten simuliert werden. Hierfür können mit dem Code zur Simulation kontinuierlich (alle 30 Sekunden) per Zufallsgenerator Daten zu folgenden Maschinenparametern erstellt werden:
 -	Drehzahl,
 -	Leistungsaufnahme,
