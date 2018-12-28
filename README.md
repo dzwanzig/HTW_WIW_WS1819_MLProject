@@ -47,7 +47,7 @@ Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 ## File-List
 
 ## Codes-Erläuterungen ([source_code](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/source_code))
-
+Nachfolgend werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde.  
 ### Simulationsdaten ([tp_helper.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_helper.py))
 Um Analysen nach ML-Methoden durchführen zu können, müssen vorab Maschinendaten simuliert werden. Hierfür können mit dem Code zur Simulation kontinuierlich (alle 30 Sekunden) per Zufallsgenerator Daten zu folgenden Maschinenparametern erstellt werden:
 -	Drehzahl,
