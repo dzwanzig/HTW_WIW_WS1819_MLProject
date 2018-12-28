@@ -2,13 +2,13 @@
 ## Handling 
 ## Table of Contents  
 
-[Project Description](#Project)  
+[Project-Description](#Project-Description)  
  
-[File list](#File)
+[File-List](#File-List)
 
-[Erläuterungen zu den Codes](#Erläuterungen)
+[Codes-Erläuterungen](#Codes-Erläuterungen)
 
-[Simulation](#Simulation)
+[Simulationsdaten](#Simulationsdaten)
 
 [Analysen](#Analysen)
 
@@ -26,7 +26,7 @@
 
 <a name="headers"/>
 
-## Project description
+## Project-Description
 Im Rahmen eines WIW-Projekts an der HTW-Berlin (Wintersemester 18/19), wurden die Themen *Predictive Maintenance* und *Machine Learning* behnadelt. Ziel war es, ein gesamtheitliches Verständnis zu den Themen zu gewinnen und Machine Learning Methoden anzuwenden sowie einen App-Prototypen zu entwickeln. Das Projektergebnis ist eine programmierte Anwendung, die es ermöglicht:
 
 - Maschinendaten zu simulieren und in einer SQL Server Datenbank bereitzustellen,
@@ -44,9 +44,9 @@ In Rahmen von weiteren Projekten der HTW Berlin können die zuvor beschriebenen 
 Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
 
-## File list
+## File-List
 
-## Erläuterungen zu den Codes
+## Codes-Erläuterungen
 
 ### Simulationsdaten ([tp_helper.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_helper.py))
 Um Analysen nach ML-Methoden durchführen zu können, müssen vorab Maschinendaten simuliert werden. Hierfür können mit dem Code zur Simulation kontinuierlich (alle 30 Sekunden) per Zufallsgenerator Daten zu folgenden Maschinenparametern erstellt werden:
