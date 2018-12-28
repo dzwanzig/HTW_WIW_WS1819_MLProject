@@ -74,6 +74,7 @@ Sowohl die Simulationsdaten, als auch die Analysedaten werden kontinuierlich in 
 
 ## Acknowledgments
 An dieser Stelle möchten wir uns bei Frau Prof. Dr.-Ing. Ute Dietrich (HTW Berlin) dafür danken, dass Sie unser Projekt betreut hat. Ihr konstruktive Feedback und stetige Unterstützung bei der Entwicklung von zum Beispiel Datenbanken, haben maßgeblich dazu beigetragen, dass die Projektergebnisse in dieser Form vorliegen.
+
 Auch möchten wir uns bei unseren Komilitonen bedanken, die nicht in unserer Projektgruppe waren und dennoch Interesse an unseren Arbeiten gezigt hatten. Durch ihre Hinterfragungen und Ideen konnten wir unsere Arbeitsweise und Ergebnisse stetig optimieren.
 
 
