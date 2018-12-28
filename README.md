@@ -16,8 +16,6 @@
 
 [Lizensierung](#Lizensierung)
 
-[Tests](#Tests)
-
 [Acknowledgments](#Acknowledgments)
 
 [Kontaktinformationen](#Kontaktinformationen)
