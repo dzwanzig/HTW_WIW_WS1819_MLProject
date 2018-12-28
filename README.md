@@ -2,11 +2,11 @@
 ## Handling 
 ## Table of Contents  
 
-[Project Description](#Project description)  
+[Project Description](Project description)  
  
-[File list](#File list)
+[File list](File list)
 
-[Erläuterungen zu den Codes](#Erläuterungen zu den Codes)
+[Erläuterungen zu den Codes](Erläuterungen zu den Codes)
 
 [Simulation](#Simulation)
 
