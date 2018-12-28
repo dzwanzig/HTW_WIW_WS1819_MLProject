@@ -10,7 +10,7 @@
 
 [Simulationsdaten](#Simulationsdaten)
 
-[Analysen](#Analysen)
+[Analysen-ML-Methoden](#Analysen-ML-Methoden)
 
 [Datenbanken](#Datenbanken)
 
@@ -49,7 +49,7 @@ Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 ## Codes-Erläuterungen ([source_code](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/source_code))
 Nachfolgend werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde.  
 ### Simulationsdaten ([tp_helper.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_helper.py))
-Um Analysen nach ML-Methoden durchführen zu können, müssen vorab Maschinendaten simuliert werden. Hierfür können mit dem Code zur Simulation kontinuierlich (alle 30 Sekunden) per Zufallsgenerator Daten zu folgenden Maschinenparametern erstellt werden:
+Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* unter Verwendung eines Zufallgenerators Simulationsdaten erzeugt. Mit dem Code (siehe [tp_helper.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_helper.py)) können kontinuierlich (alle 30 Sekunden) per Daten zu folgenden Maschinenparametern erstellt werden:
 -	Drehzahl,
 -	Leistungsaufnahme,
 -	Vibration,
@@ -59,7 +59,7 @@ Um Analysen nach ML-Methoden durchführen zu können, müssen vorab Maschinendat
 -	Produktionsprogramm,
 -	Ist-Menge.
 
-### Analysen
+### Analysen-ML-Methoden ([tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py))
 Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Codes analysiert werden. Dabei werden folgende ML-Methoden verwendet:
 -	Lineare Regression,
 -	ARIMA.
@@ -72,8 +72,11 @@ Sowohl die Simulationsdaten, als auch die Analysedaten werden kontinuierlich in 
 
 ## Lizensierung
 
-## Tests
-
 ## Acknowledgments
+An dieser Stelle möchten wir uns bei Frau Prof. Dr.-Ing. Ute Dietrich (HTW Berlin) dafür danken, dass Sie unser Projekt betreut hat. Ihr konstruktive Feedback und stetige Unterstützung bei der Entwicklung von zum Beispiel Datenbanken, haben maßgeblich dazu beigetragen, dass die Projektergebnisse in dieser Form vorliegen.
+Auch möchten wir uns bei unseren Komilitonen bedanken, die nicht in unserer Projektgruppe waren und dennoch Interesse an unseren Arbeiten gezigt hatten. Durch ihre Hinterfragungen und Ideen konnten wir unsere Arbeitsweise und Ergebnisse stetig optimieren.
+
 
 ## Kontaktinformationen
+Frau Prof. Dr.-Ing. Ute Dietrich 
+Ute.Dietrich@HTW-Berlin.de
