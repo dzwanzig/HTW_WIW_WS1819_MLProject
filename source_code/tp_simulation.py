@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 import pymssql
 import time as t
 
+absolviert = 0
+
 # Verbindung mit Datenbank herstellen
 conn = pymssql.connect("pcs.f4.htw-berlin.de", "Masterprojekt", "Masterprojekt", "PraediktiveAnalysenTest")
 cursor = conn.cursor()
@@ -114,9 +116,9 @@ def normalbetrieb():
 # Erstellung mehrerer Datensätze durch Schleife (Wartung)
 
 
-def wartung():
+def zufallsfehler():
     global drehzahl, leistungsaufnahme, vibration, lautstaerke, data_id_nr, temperatur, time, fehler_id, ist_menge, ausschuss
-    fehler_id = wartung_grund()
+    fehler_id = zufallsfehler_grund()
     x = 0
     y = random.randrange(10, 100)
     while x < y:
@@ -132,10 +134,10 @@ def wartung():
         write_data()
         x = x + 1
 
-# Wartungsgrund auswählen
+# Zufallsfehlergrund auswählen
 
 
-def wartung_grund():
+def zufallsfehler_grund():
     random_choice = random.randrange(1, 100)
     if random_choice < 40:
         return "A001"   # Kein Material/ kein Auftrag/ kein Personal (A001)
@@ -151,14 +153,14 @@ def wartung_grund():
 # Erstellung mehrerer Datensätze durch Schleife (Ausfall aufgrund zu hoher Motortemperatur)
 
 
-def ausfall_2():
+def systematischerfehler_2():
     global drehzahl, leistungsaufnahme, vibration, lautstaerke, data_id_nr, temperatur, time, fehler_id, ist_menge, ausschuss
     fehler_id = "x000"
 
     # Motortemperatur steigt bis zum Ausfall
     while temperatur < 200:
         drehzahl = 100 + random.randrange(-4, 0)
-        leistungsaufnahme = round(np.random.normal(18.5 + np.random.normal(0.13, 0.2), 0.2), 3)
+        leistungsaufnahme = round(leistungsaufnahme + np.random.normal(0.13, 0.2), 3)
         vibration = round(np.random.normal(0, 0.1), 3)
         lautstaerke = round(np.random.normal(75, 0.1), 3)
         temperatur = round(temperatur + np.random.normal(0.5, 0.3), 1)
@@ -184,13 +186,13 @@ def ausfall_2():
 # Erstellung mehrerer Datensätze durch Schleife (Ausfall aufgrund zu hoher Leistungsaufnahme)
 
 
-def ausfall_1():
+def systematischerfehler_1():
     global drehzahl, leistungsaufnahme, vibration, lautstaerke, data_id_nr, temperatur, time, fehler_id, ist_menge, ausschuss
     fehler_id = "x000"
     # Strombedarf steigt bis zum Ausfall
     while leistungsaufnahme < 25:
         drehzahl = 100 + random.randrange(-3, 1)
-        leistungsaufnahme = round(np.random.normal(18.5 + np.random.normal(0.5, 0.1), 0.2), 3)
+        leistungsaufnahme = round(leistungsaufnahme + np.random.normal(0.5, 0.1), 3)
         vibration = round(np.random.normal(0, 0.1), 3)
         lautstaerke = round(np.random.normal(75, 0.1), 3)
         temperatur = round(temperatur + np.random.normal(0.5, 0.2), 1)
@@ -224,25 +226,29 @@ def ausfall_1():
 
 
 def choose_test():
+    global absolviert
     random_choice = random.randrange(1, 100)
     if random_choice < 50:
         normalbetrieb()
     else:
-        ausfall_1()
+        systematischerfehler_1()
+    absolviert += 1
 
 # Auswahl zwischen den Events
 
 
 def choose_normal():
+    global absolviert
     random_choice = random.randrange(1, 100)
     if random_choice < 90:
         normalbetrieb()
     elif random_choice < 95:
-        ausfall_1()
+        systematischerfehler_1()
     elif random_choice < 98:
-        ausfall_2()
+        systematischerfehler_2()
     else:
-        wartung()
+        zufallsfehler()
+    absolviert += 1
 
 
 # Aufruf Auswahl
@@ -251,7 +257,9 @@ choice = input("Für Testbetrieb bitte 'TEST' eingeben, andere Eingaben führen 
 # Wartezeit auswählen
 wait_for = int(input("Wartezeit in Sekunden: "))
 
-while True:
+szenariendurchlaeufe = int(input("Anzahl der gewünschten Szenariendurchläufe angeben: "))
+
+while szenariendurchlaeufe > absolviert:
     if choice == "TEST":
         choose_test()
     else:
