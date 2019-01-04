@@ -12,6 +12,8 @@
 
 [Datenbanken](#Datenbanken)
 
+[OEE-Kennzahl](#OEE-Kennzahl)
+
 [Installation](#Installation)
 
 [Lizensierung](#Lizensierung)
@@ -63,6 +65,15 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
 ### Datenbanken ([tp_server.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_server.py))
 
 Sowohl die Simulationsdaten, als auch die Analysedaten werden kontinuierlich in SQL-Datenbanken übertragen, welche auf einem Server der HTW Berlin zur Verfügung gestellt wurden. Somit stehen die Daten für das App Team bereit zur Visualisierung. 
+
+### OEE-Kennzahl ([ap_PythonEditorWrapper.PY](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/ap_PythonEditorWrapper.PY))
+
+Die in der Datenbank (Tabelle I) bereitgestellten Simulationsdaten werden ausgewertet, um die OEE-Kennzahl (Overall Equipment Effectiveness Kennzahl) zu ermitteln. Dafür werden folgende Faktoren berechnet:
+- Nutzungsgradfaktor,
+- Qualitätsfaktor,
+- Effizienzfaktor.
+OEE = Nutzungsgradfaktor * Qualitätsfaktor * Effizienzfaktor * 100
+
 
 ## Installation
 
