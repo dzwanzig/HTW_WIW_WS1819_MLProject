@@ -45,8 +45,8 @@ Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
 ## Codes-Erläuterungen ([source_code](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/source_code))
 Nachfolgend werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde.  
-### Simulationsdaten ([tp_sim.py *noch nicht abgelegt*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_helper.py))
-Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* unter Verwendung eines Zufallgenerators Simulationsdaten erzeugt. Mit dem Code (siehe [tp_helper.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_helper.py)) können kontinuierlich (alle 30 Sekunden) per Daten zu folgenden Maschinenparametern erstellt werden:
+### Simulationsdaten ([tp_db_sim.py *noch nicht abgelegt*]
+Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* Maschinendaten simuliert, welche in der Datenbank *PraediktiveAnalysenTest* in der Tabelle *Maschinendaten_20181206* hochgeladen werden. Mit dem Code werden folgende Maschinenparameter erstellt:
 -	Drehzahl,
 -	Leistungsaufnahme,
 -	Vibration,
@@ -55,6 +55,15 @@ Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das
 -	Fehler ID,
 -	Produktionsprogramm,
 -	Ist-Menge.
+
+Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche durch einen definierten Zufallsgenerator gewählt werden. Folgende Szenarien stehen für den Zufallgenerator zur Auswahl:
+- Normalbetrieb
+- Zufallsfehler: ungeplante Wartung, ungeplanter Werkzeugwechsel, ungeplante Wartung, ungeplante Reinigung, sonstiger ungeplanter Grund
+- Systematische Fehler:
+  - Fehler 1 (F001): zu hohe Temperatur
+  - Fehler 2 (F002): zu hoher Strombedarf
+ 
+Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Unterschied zum Normalbetrieb, werden beim Testbetrieb häufiger Fehler erzeugt wodurch die Daten zu Testzwecken schneller ausgewertet werden können.
 
 ### Analysen-ML-Methoden ([tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py))
 Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Folgende ML-Methoden werden hierbei verwendet:
