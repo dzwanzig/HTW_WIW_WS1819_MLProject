@@ -47,7 +47,7 @@ Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 ([source_code LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/source_code))
 
 Nachfolgend werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde.  
-### Simulationsdaten ([tp_db_sim.py *noch nicht abgelegt*]
+### Simulationsdaten ([tp_simulation.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_simulation.py))
 Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* Maschinendaten simuliert, welche in der Datenbank *PraediktiveAnalysenTest* in der Tabelle *Maschinendaten_20181206* hochgeladen werden. Mit dem Code werden folgende Maschinenparameter erstellt:
 -	Drehzahl,
 -	Leistungsaufnahme,
@@ -60,7 +60,8 @@ Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das
 
 Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche durch einen definierten Zufallsgenerator gewählt werden. Folgende Szenarien stehen für den Zufallgenerator zur Auswahl:
 - Normalbetrieb
-- Zufallsfehler: ungeplante Wartung, ungeplanter Werkzeugwechsel, ungeplante Wartung, ungeplante Reinigung, sonstiger ungeplanter Grund
+- Zufallsfehler: 
+  ungeplante Wartung, ungeplanter Werkzeugwechsel, ungeplante Wartung, ungeplante Reinigung, sonstiger ungeplanter Grund
 - Systematische Fehler:
   - Fehler 1 (F001): zu hohe Temperatur
   - Fehler 2 (F002): zu hoher Strombedarf
