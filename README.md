@@ -4,11 +4,11 @@
 
 [Project-Description](#Project-Description)  
 
-[source_code](#source_code)
+[Source-Codes](#Source-Codes)
 
 [Simulationsdaten](#Simulationsdaten)
 
-[Analysen-ML-Methoden](#Analysen-ML-Methoden)
+[ML-Tools](#ML-Tools)
 
 [Datenbanken](#Datenbanken)
 
@@ -43,14 +43,14 @@ In Rahmen von weiteren Projekten der HTW Berlin können die zuvor beschriebenen 
 ![alt text](https://github.com/Hawky12/HTW_WIW_WS1819_MLProject/blob/master/Aufteilung%20der%20Teams.PNG?raw=true)
 Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
-## source_code
+## Source-Codes
 ([source_code LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/source_code))
 
 Nachfolgend werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde.  
 ### Simulationsdaten 
 [tp_simulation.py LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_simulation.py)
 
-Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* Maschinendaten simuliert, welche in der Datenbank *PraediktiveAnalysenTest* in der Tabelle *Maschinendaten_20181206* hochgeladen werden. Mit dem Code werden folgende Maschinenparameter erstellt:
+Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* Maschinendaten simuliert, welche in der Datenbank *PraediktiveAnalysenTest* in der Tabelle *Maschinendaten_20181206* auf dem HTW FB4 Server hochgeladen werden. Mit dem Code werden folgende Maschinenparameter erstellt:
 -	Drehzahl,
 -	Leistungsaufnahme,
 -	Vibration,
@@ -70,10 +70,14 @@ Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche du
  
 Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Unterschied zum Normalbetrieb, werden beim Testbetrieb häufiger Fehler erzeugt wodurch die Daten zu Testzwecken schneller ausgewertet werden können.
 
-### Analysen-ML-Methoden ([tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py))
+### ML-Tools
+[tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py)
 Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Folgende ML-Methoden werden hierbei verwendet:
--	linear regression,
-- polynominal logistic regression,
+-	Lineare Regression:
+  zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
+  Dabei wird der niedrigere Zeitwert angegeben.
+- KNN (K-Nearest Neighbors):
+  
 - logistic regression,
 -	ARIMA,
 - KNN.
