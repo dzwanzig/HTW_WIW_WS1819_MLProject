@@ -6,11 +6,11 @@
 
 [Source-Codes](#Source-Codes)
 
-[Simulationsdaten(1)](#Simulationsdaten(1))
+[Simulationsdaten](#Simulationsdaten_1)
 
-[ML-Tools](#ML-Tools(4))
+[ML-Tools](#ML-Tools_4)
 
-[Ausführung-ML-Tools](#Ausführung-ML-Tools(4))
+[Ausführung-ML-Tools](#Ausführung-ML-Tools_4)
 
 [Datenbanken](#Datenbanken)
 
@@ -50,7 +50,7 @@ Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
 Im weiteren Verlauf dieses READMEs werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde. Die nachfolgenden Titel zu den Codes sind analog zur Übersicht der *Aufgabenaufteilung und Schnittstellen der Projektteams* (Abb. 1) nummeriert, um herleiten zu können, welcher Code für welche Aufgabe verwendet wird.
 
-### Simulationsdaten(1) 
+### Simulationsdaten_1 
 [tp_simulation.py LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_simulation.py)
 
 Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* Maschinendaten simuliert, welche in der Datenbank *PraediktiveAnalysenTest* in der Tabelle *Maschinendaten_20181206* auf dem HTW FB4 Server hochgeladen werden. Mit dem Code werden folgende Maschinenparameter erstellt:
@@ -73,7 +73,7 @@ Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche du
  
 Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Unterschied zum Normalbetrieb, werden beim Testbetrieb häufiger Fehler erzeugt wodurch die Daten zu Testzwecken schneller ausgewertet werden können.
 
-### ML-Tools
+### ML-Tools_4
 [tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py)
 Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Folgende ML-Methoden in verwerden hierbei verwendet:
 -	*Linear Regression*:
@@ -94,7 +94,7 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
  In Verbindung mit den Codes der zuvor genannten ML-Tools sind die Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) und [*scalers*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers) zu betrachten.
  In [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) sind die erstellten Modelle der jeweiligen ML-Methoden gespeichert. Bei https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers sind die normal skalierten Datensätze gespeichert, die zur Verwendung der jweiligen ML-Methoden *KNN*, *Polynominal logistic Regression* und *logistic Regression*notwendig sind.
  
-### Ausführung-ML-Tools(4)
+### Ausführung-ML-Tools_4
 [tp_start.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_start.py)
 
 
