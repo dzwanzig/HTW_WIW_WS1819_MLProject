@@ -80,7 +80,7 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
 - KNN (K-Nearest Neighbors):
   zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der nächsten Nachbarn. Mit der Fragestellung, ob 
   in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze 
-  in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*] (https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze 
+  in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze 
   werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *JA* oder *NEIN* 
   klassifiziert. 
   
