@@ -211,7 +211,7 @@ def systematischerfehler_1():
     # zufällige Ausfallzeit
     x = 0
     y = random.randrange(10, 100)
-    while (y < x) and (temperatur != 100):
+    while (x < y) or (temperatur != 100):
         drehzahl = 0
         leistungsaufnahme = round(np.random.normal(1.5, 0.1), 3)
         vibration = round(np.random.normal(0, 0.1), 3)
@@ -227,7 +227,7 @@ def systematischerfehler_1():
         print("Motorkühlung auf 100 °C und " + str(y-x) + " Schritte warten")
         write_data()
         x = x + 1
-        normalbetrieb()
+    normalbetrieb()
 
 # Für Test nur Normalbetrieb und Ausfall 1 eingeschaltet
 
@@ -235,7 +235,7 @@ def systematischerfehler_1():
 def choose_test():
     global absolviert
     random_choice = random.randrange(1, 100)
-    if random_choice < 50:
+    if random_choice < 2:
         systematischerfehler_2()
     else:
         systematischerfehler_1()
