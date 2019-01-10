@@ -6,9 +6,11 @@
 
 [Source-Codes](#Source-Codes)
 
-[Simulationsdaten](#(1)Simulationsdaten(1))
+[Simulationsdaten](#Simulationsdaten_1)
 
-[ML-Tools](#ML-Tools)
+[ML-Tools](#ML-Tools_4)
+
+[Ausführung-ML-Tools](#Ausführung-ML-Tools_4)
 
 [Datenbanken](#Datenbanken)
 
@@ -48,7 +50,7 @@ Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
 Im weiteren Verlauf dieses READMEs werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde. Die nachfolgenden Titel zu den Codes sind analog zur Übersicht der *Aufgabenaufteilung und Schnittstellen der Projektteams* (Abb. 1) nummeriert, um herleiten zu können, welcher Code für welche Aufgabe verwendet wird.
 
-### Simulationsdaten(1) 
+### Simulationsdaten_1 
 [tp_simulation.py LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_simulation.py)
 
 Da während der Projektzeit keine realen Maschinendaten vorhanden waren, hat das *Team Predictive* Maschinendaten simuliert, welche in der Datenbank *PraediktiveAnalysenTest* in der Tabelle *Maschinendaten_20181206* auf dem HTW FB4 Server hochgeladen werden. Mit dem Code werden folgende Maschinenparameter erstellt:
@@ -71,30 +73,32 @@ Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche du
  
 Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Unterschied zum Normalbetrieb, werden beim Testbetrieb häufiger Fehler erzeugt wodurch die Daten zu Testzwecken schneller ausgewertet werden können.
 
-### ML-Tools
+### ML-Tools_4
 [tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py)
-Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Folgende ML-Methoden in verwerden hierbei verwendet:
--	Linear Regression:
+Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Nachfolgend wird kurz beschrieben, wozu die angewandten ML-Methoden verwendet wurden. Wie die ML-Methoden ausgeführt werden können, wird im nächsten abschnitt [(Ausführung-ML-Tools_4)](#Ausführung-ML-Tools_4) beschrieben.
+-	*Linear Regression*:
   zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
   Dabei wird der niedrigere Zeitwert angegeben.
-- KNN (K-Nearest Neighbors):
-  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der nächsten Nachbarn. Mit der Fragestellung, ob 
+- *KNN (K-Nearest Neighbors)*:
+  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob 
   in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze 
   in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze 
   werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *JA* oder *NEIN* 
   klassifiziert. 
-- Logistic Regression
-  
+- *Logistic Regression*:
+  zur Klassiefizierung neuer Datensätz mit gleichen Maschinenparametern und gleicher Fragestellung, wie zuvor unter *KNN* erläutert. Anhand von Datensätzen wird eine *Logistischen Funktion* erzeugt, welche bezogen auf die Fragestellung eine Ebene zwischen *JA* und *NEIN* darstellt. Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden.  
+- *Polynomial Logistic Regression*:
+- *Train Test Split*:
+  zur Bewertung der Modelle anhand von Trainings- und Testdaten und der Ermittlung des Modelscores.
  
  In Verbindung mit den Codes der zuvor genannten ML-Tools sind die Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) und [*scalers*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers) zu betrachten.
  In [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) sind die erstellten Modelle der jeweiligen ML-Methoden gespeichert. Bei https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers sind die normal skalierten Datensätze gespeichert, die zur Verwendung der jweiligen ML-Methoden *KNN*, *Polynominal logistic Regression* und *logistic Regression*notwendig sind.
  
-- logistic regression,
--	ARIMA,
-- KNN.
+### Ausführung-ML-Tools_4
+[tp_start.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_start.py)
+Mit dem Ausführungscode kann die Anwendung der ML-Methoden gestartet werden. Dafür werden die Funktionen aus den einzelnen Source-Codes der zuvor beschriebenen *ML-Tools* importiert. Weiterhin werden die Tabellen der Datenbank ausgelesen und die ML-Modelle erstellt. Es wird geprüft, ob innerhalb der nächsten 50 Messschritte beziehungsweise 25 min ein systematischer Fehler (F001, F002) festgestellt wird. Der vorausgesagte Zeitpunkt des Ausfalls wird dann in die Predictions-Tabelle geschrieben.
 
 ### Datenbanken ([tp_server.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_server.py))
-
 Sowohl die Simulationsdaten, als auch die Analysedaten werden kontinuierlich in SQL-Datenbanken übertragen, welche auf einem Server der HTW Berlin zur Verfügung gestellt wurden. Somit stehen die Daten für das App Team bereit zur Visualisierung. 
 
 ### OEE-Kennzahl ([ap_PythonEditorWrapper.PY](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/ap_PythonEditorWrapper.PY))
