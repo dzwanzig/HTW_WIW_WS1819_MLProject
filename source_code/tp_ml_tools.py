@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 import time as t
 from datetime import datetime, timedelta
-from tp_server import read_db_20, rul_write, get_df, get_latest
+from tp_server import rul_write, get_df, get_latest
 from sklearn.model_selection import train_test_split
 from tp_helper import del_sort_add, filter_data, wait
 from sklearn.linear_model import LogisticRegression
