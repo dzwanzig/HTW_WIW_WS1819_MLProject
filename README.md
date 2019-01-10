@@ -12,7 +12,7 @@
 
 [Ausführung-ML-Tools](#Ausführung-ML-Tools_4)
 
-[Arima](#Arima)
+[ARIMA](#ARIMA)
 
 [Datenbanken](#Datenbanken)
 
