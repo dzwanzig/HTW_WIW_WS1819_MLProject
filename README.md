@@ -106,9 +106,11 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
 
 Mit dem Ausführungscode kann die Anwendung der ML-Methoden gestartet werden. Dafür werden die Funktionen aus den einzelnen Source-Codes der zuvor beschriebenen *ML-Tools* importiert. Weiterhin werden die Tabellen der Datenbank ausgelesen und die ML-Modelle erstellt. Es wird geprüft, ob innerhalb der nächsten 50 Messschritte beziehungsweise 25 min ein systematischer Fehler (F001, F002) festgestellt wird. Der vorausgesagte Zeitpunkt des Ausfalls wird dann in die Predictions-Tabelle geschrieben.
 
-### Arima (*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel
+### ARIMA
+(*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel)
+[tp_arima.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_arima.py)
 
-
+Die *ARIMA*-Methode ist nicht, wie die anderen ML-Methoden im Code *tp_ml_tools.py* integriert.
 
 ### Datenbanken 
 [tp_server.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_server.py)
@@ -132,8 +134,20 @@ OEE = Nutzungsgradfaktor * Qualitätsfaktor * Effizienzfaktor * 100
 
 
 ## Installation
+- Anaconda
+- Bibliotheken (siehe File *Bibliotheken*)
+- 
+- 
+
 
 ## Start-Anwendung
+### Start-Anwendung-TP
+- Start Tabellen
+- Start Simulationsdaten
+- Start ML-Methoden
+
+### Start-Anwendung-TA
+
 
 ## Lizensierung
 
