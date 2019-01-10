@@ -137,7 +137,7 @@ OEE = Nutzungsgradfaktor * Qualitätsfaktor * Effizienzfaktor * 100
 - Anaconda
 - Bibliotheken (siehe File *Bibliotheken*)
 - 
-- |**Name der Bibliothek**|**In welchem Code verwendet**|**Funktion**|
+|**Name der Bibliothek**|**In welchem Code verwendet**|**Funktion**|
 |:----------------------:|:----------------------:|:----------------------:|
 
 
