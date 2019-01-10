@@ -13,5 +13,5 @@ Bibliotheken beschreiben: Namen headden, beschreiben was es kann / wofür verwen
 |warnings|[tp_arima.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_arima.py)|Fehlerbehandlung|
 |warnings.filterwarnings|[tp_arima.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_arima.py)|Abstellen von Warnungen|
 |ARIMA|[tp_arima.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_arima.py)|Berechnung der ARIMA|statsmodels.tsa.arima_model|
-|mean_squared_error|[tp_arima.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_arima.py)|sklearn.metrics|
+|mean_squared_error|[tp_arima.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_arima.py)|Modul zur MSE-Berechnung|sklearn.metrics|
 
