@@ -74,16 +74,18 @@ Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Untersch
 ### ML-Tools
 [tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py)
 Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Folgende ML-Methoden in verwerden hierbei verwendet:
--	Linear Regression:
+-	*Linear Regression*:
   zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
   Dabei wird der niedrigere Zeitwert angegeben.
-- KNN (K-Nearest Neighbors):
-  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der nächsten Nachbarn. Mit der Fragestellung, ob 
+- *KNN (K-Nearest Neighbors)*:
+  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob 
   in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze 
   in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze 
   werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *JA* oder *NEIN* 
   klassifiziert. 
-- Logistic Regression
+- *Logistic Regression*:
+  zu Klassiefizierung neuer Datensätz mit gleichen Maschinenparametern und gleicher Fragestellung, wie zuvor unter *KNN* erläutert. Anhand von Datensätzen wird eine *Logistischen Funktion* erzeugt, welche bezogen auf die Fragestellung eine Ebene zwischen *JA* und *NEIN* darstellt. Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden.  
+- *Polynomial Logistic Regression*:
   
  
  In Verbindung mit den Codes der zuvor genannten ML-Tools sind die Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) und [*scalers*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers) zu betrachten.
