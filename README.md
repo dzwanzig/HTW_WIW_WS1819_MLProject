@@ -22,6 +22,10 @@
 
 [OEE-Kennzahl](#OEE-Kennzahl)
 
+[Datenbank-Abruf](#Datenbank-Abruf)
+
+[Power-BI-Upload](#Power-BI-Upload)
+
 [Installation](#Installation)
 
 [Start-Anwendung](#Start-Anwendung)
@@ -124,13 +128,20 @@ Mit dem Code *tp_helper.py* werden die Daten bereinigt, die nicht für die Predi
 
 ## Source-Codes-TA
 
-### OEE-Kennzahl ([ap_PythonEditorWrapper.PY](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/ap_PythonEditorWrapper.PY))
+### OEE-Kennzahl 
+[ap_PythonEditorWrapper.PY](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/ap_PythonEditorWrapper.PY)
 
 Die in der Datenbank (Tabelle I) bereitgestellten Simulationsdaten werden ausgewertet, um die OEE-Kennzahl (Overall Equipment Effectiveness Kennzahl) zu ermitteln. Dafür werden folgende Faktoren berechnet:
 - Nutzungsgradfaktor,
 - Qualitätsfaktor,
 - Effizienzfaktor.
 OEE = Nutzungsgradfaktor * Qualitätsfaktor * Effizienzfaktor * 100
+
+### Datenbank-Abruf
+
+### Power-BI-Upload
+
+
 
 
 ## Installation
