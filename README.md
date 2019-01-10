@@ -74,7 +74,7 @@ Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Untersch
 ### ML-Tools
 [tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py)
 Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Folgende ML-Methoden in verwerden hierbei verwendet:
--	Lineare Regression:
+-	Linear Regression:
   zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
   Dabei wird der niedrigere Zeitwert angegeben.
 - KNN (K-Nearest Neighbors):
@@ -83,9 +83,11 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
   in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze 
   werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *JA* oder *NEIN* 
   klassifiziert. 
+- Logistic Regression
+  
  
- In Verbindung mit den Codes der zuvor genannten ML-Tools sind die Ordner *saved_models* und *scalers* zu betrachten.
- In *saved_models* sind die erstellten Modelle der jeweiligen ML-Methoden gespeichert. Bei *scalers* sind die skalierten Datensätze gespeichert, die zur Verwendung der jweiligen ML-Methoden notwendig sind.
+ In Verbindung mit den Codes der zuvor genannten ML-Tools sind die Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) und [*scalers*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers) zu betrachten.
+ In [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) sind die erstellten Modelle der jeweiligen ML-Methoden gespeichert. Bei https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers sind die normal skalierten Datensätze gespeichert, die zur Verwendung der jweiligen ML-Methoden *KNN*, *Polynominal logistic Regression* und *logistic Regression*notwendig sind.
  
 - logistic regression,
 -	ARIMA,
