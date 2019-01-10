@@ -1,4 +1,5 @@
 # Bibliotheken
 Bibliotheken beschreiben: Namen headden, beschreiben was es kann / wofür verwendet
+
 |**Name der Bibliothek**|**In welchem Code verwendet**|**Funktion**|
 |:----------------------:|:----------------------:|:----------------------:|
