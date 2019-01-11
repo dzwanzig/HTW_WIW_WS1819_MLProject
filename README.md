@@ -97,17 +97,18 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
   Dabei wird der niedrigere Zeitwert angegeben. Weitere Informationen zur *Linear Regression* siehe https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols.html.
   
 - *ARIMA* (*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel): 
-  Ermittlung der Leistungsaufnahme und Überschreitung des Grenzwertes. Weitere Informationen zur *ARIMA* siehe https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima_model.ARIMA.html
+  Ermittlung der Leistungsaufnahme und Überschreitung des Grenzwertes. Weitere Informationen zur *ARIMA* siehe https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima_model.ARIMA.html.
 
 - *KNN (K-Nearest Neighbors)*:
-  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *JA* oder *NEIN* klassifiziert. Weitere Informationen zu *KNN* siehe https://scikit-learn.org/stable/modules/neighbors.html
+  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *JA* oder *NEIN* klassifiziert. Weitere Informationen zu *KNN* siehe https://scikit-learn.org/stable/modules/neighbors.html.
 - *Logistic Regression*: 
   zur Klassiefizierung neuer Datensätz mit gleichen Maschinenparametern und gleicher Fragestellung, wie zuvor unter *KNN* erläutert. Anhand von Datensätzen wird eine *Logistischen Funktion* erzeugt, welche bezogen auf die Fragestellung eine Ebene zwischen *JA* und *NEIN* darstellt. Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden. 
-   Weitere Informationen zu *Logistic Regression* siehe https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+   Weitere Informationen zu *Logistic Regression* siehe https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html.
 - *Polynomial Logistic Regression*: wie *Logistic Regression* mit anderer Funktion mit anderer Ebene.
 - *Train Test Split*:
   zur Bewertung der Modelle anhand von Trainings- und Testdaten und der Ermittlung des Modelscores.
-  Weitere Informationen zu *Train Test Split* siehe https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+  Weitere Informationen zu *Train Test Split* siehe https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html.
+ 
  In Verbindung mit den Codes der zuvor genannten ML-Tools sind die Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) und [*scalers*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers) zu betrachten.
  In [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) sind die erstellten Modelle der jeweiligen ML-Methoden gespeichert. Bei [*scalers*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers) sind die normal skalierten Datensätze gespeichert, die zur Verwendung der jweiligen ML-Methoden *KNN*, *Polynominal logistic Regression* und *logistic Regression*notwendig sind.
  
