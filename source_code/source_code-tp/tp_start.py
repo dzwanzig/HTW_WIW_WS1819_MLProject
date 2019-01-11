@@ -43,6 +43,11 @@ while True:
           rul_write(df_lin_reg, rul_knn*60, method = "knn", failure = fail)
           if prediction_arima != "fail":
                 rul_write(df_lin_reg, rul_arima*60, method = "arima", failure=fail)
+                rul_mittel = (rul_lin + rul_knn + rul_arima)/3
+                rul_write(df_lin_reg, rul_mittel*60, method = "mittel", failure=fail)
+          else:
+                rul_mittel = (rul_lin + rul_knn)/2
+                rul_write(df_lin_reg, rul_mittel*60, method="mittel", failure=fail)
     else:
           print("Kein Ausfall in den nächsten 25 Minuten zu erwarten!")
       
