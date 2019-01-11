@@ -91,7 +91,7 @@ Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Untersch
 ### ML-Tools_4
 [tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py)
 
-Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Nachfolgend wird kurz beschrieben, wozu die angewandten ML-Methoden verwendet wurden. Wie die ML-Methoden ausgeführt werden können, wird im nächsten abschnitt [(Ausführung-ML-Tools_4)](#Ausführung-ML-Tools_4) beschrieben.
+Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Nachfolgend wird kurz beschrieben, wozu die angewandten ML-Methoden verwendet wurden. Genauere Erläuterungen findet man im *WIKI* unter *Was ist Machine Learning*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/wiki/Was-ist-Maschine-learning%3F). Wie die ML-Methoden ausgeführt werden können, wird im nächsten abschnitt [(Ausführung-ML-Tools_4)](#Ausführung-ML-Tools_4) beschrieben.
 -	*Linear Regression*:
   zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
   Dabei wird der niedrigere Zeitwert angegeben.
