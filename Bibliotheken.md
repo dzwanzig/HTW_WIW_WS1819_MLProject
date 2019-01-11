@@ -1,9 +1,9 @@
 # Bibliotheken
 
-*Viele Bibliotheken sind bereits bei Anaconda installiert und müssen lediglich importiert werden. Bibliotheken, die noch nicht verfügbar sind, können in *Anaconda > Environment* ausgewählt und installiert werden (siehe nachfolgender Screenshot.*
+Viele Bibliotheken sind bereits bei Anaconda installiert und müssen lediglich importiert werden. Bibliotheken, die noch nicht verfügbar sind, können in *Anaconda > Environment* ausgewählt und installiert werden (siehe nachfolgender Screenshot.
 
 
-|**Name der Bibliothek**|**In welchem Code verwendet**|**Funktion**|
+|**Name Modul / Bibliothek**|**Wo verwendet**|**Funktion**|
 |:----------------------:|:----------------------:|:----------------------:|
 |matplotlib|tp_arima.py;tp_ml_tools.py|Datenvisualisierung|
 |pandas|tp_arima.py; tp_helper.py; tp_ml_tools.py; tp_server.py|Datenanalyse Tools|
