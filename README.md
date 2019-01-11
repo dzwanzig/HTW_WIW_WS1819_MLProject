@@ -95,6 +95,9 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
 -	*Linear Regression*:
   zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
   Dabei wird der niedrigere Zeitwert angegeben.
+  *ARIMA*(*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel)
+   Die *ARIMA*-Methode ist nicht, wie die anderen ML-Methoden im Code *tp_ml_tools.py* integriert.
+
 - *KNN (K-Nearest Neighbors)*:
   zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob 
   in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze 
@@ -116,12 +119,6 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
 Mit dem Ausführungscode kann die Anwendung der ML-Methoden gestartet werden. Dafür werden die Funktionen aus den einzelnen Source-Codes der zuvor beschriebenen *ML-Tools* importiert. Weiterhin werden die Tabellen der Datenbank ausgelesen und die ML-Modelle erstellt. Es wird geprüft, ob innerhalb der nächsten 50 Messschritte beziehungsweise 25 min ein systematischer Fehler (F001, F002) festgestellt wird. Der vorausgesagte Zeitpunkt des Ausfalls wird dann in die Predictions-Tabelle geschrieben.
 
 Die einzelnen ML-Methoden können über die *Jupyter-Notebooks* im Ordner [notebooks](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/notebooks) nachvollzogen werden. Anaconda liefert die Anwendung *Jupyter* automatisch bei der installation mit. Einstieg in *Jupiter-Notebook* findet man im Tutorial unter folgendem Link: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/ 
-
-### ARIMA
-(*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel)
-[tp_arima.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_arima.py)
-
-Die *ARIMA*-Methode ist nicht, wie die anderen ML-Methoden im Code *tp_ml_tools.py* integriert.
 
 ### Datenbanken 
 [tp_server.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_server.py)
