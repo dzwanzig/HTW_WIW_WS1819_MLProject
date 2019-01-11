@@ -145,9 +145,14 @@ def poly_log_reg_predict(df):
 # ARIMA Methode
 
 
-def arimamodell(data):
+def arimamodell(data, spalte, grenze):
+    """Funktion erstellt ein Arima Model und gibt zurück, in wie vielen Minuten der angegebene Grenzwert überschritten wird.
+    \n Parameter: 
+    \n data - erwartet Dataframe mit den historischen Daten, 20 Zeilen lang 
+    \n spalte - Name der Spalte, welche die Untersuchungsdaten enthält
+    \n grenze - Grenzwert"""
     try:
-        data = pd.DataFrame(data.loc[:, 'Leistungsaufnahme'])
+        data = pd.DataFrame(data.loc[:, spalte])
         # Forecastwert in Intervallen, gf * 0.5=Minuten
         gf = 30
 
@@ -184,7 +189,7 @@ def arimamodell(data):
         dvaluemin = parammin[1]
         qvaluemin = parammin[2]
         # Definition fiktiver Grenzwerte
-        posGrenze = 25
+        posGrenze = grenze
         negGrenze = 18
         p = pvaluemin
         d = dvaluemin
@@ -247,7 +252,7 @@ def arimamodell(data):
 
         return (ausfallinpos)
     except:
-        return ("fail")
+        return (float(1000))
 
 # train test split
 
