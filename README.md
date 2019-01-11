@@ -1,5 +1,4 @@
 # HTW_WIW_WS1819_MLProject
-## Handling 
 ## Table of Contents  
 
 [**Project-Description**](#Project-Description)  
@@ -77,6 +76,7 @@ Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche du
 - Normalbetrieb
 - Zufallsfehler: 
   ungeplante Wartung, ungeplanter Werkzeugwechsel, ungeplante Wartung, ungeplante Reinigung, sonstiger ungeplanter Grund
+  ![alt_text](https://user-images.githubusercontent.com/44892210/51033547-0e491080-15a4-11e9-9419-0cc4e87f47f8.png)
 - Systematische Fehler:
   - Fehler 1 (F001): zu hohe Temperatur
   ![alt_text](https://user-images.githubusercontent.com/44892210/51023624-a08eeb80-1587-11e9-9c32-22ef31f5e627.png)
@@ -100,9 +100,9 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
   Ermittlung der Leistungsaufnahme und Überschreitung des Grenzwertes. Weitere Informationen zur *ARIMA* siehe https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima_model.ARIMA.html.
 
 - *KNN (K-Nearest Neighbors)*:
-  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze in *JA* oder *NEIN* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *JA* oder *NEIN* klassifiziert. Weitere Informationen zu *KNN* siehe https://scikit-learn.org/stable/modules/neighbors.html.
+  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze in *TRUE* oder *FALSE* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *TRUE* oder *FALSE* klassifiziert. Weitere Informationen zu *KNN* siehe https://scikit-learn.org/stable/modules/neighbors.html.
 - *Logistic Regression*: 
-  zur Klassiefizierung neuer Datensätz mit gleichen Maschinenparametern und gleicher Fragestellung, wie zuvor unter *KNN* erläutert. Anhand von Datensätzen wird eine *Logistischen Funktion* erzeugt, welche bezogen auf die Fragestellung eine Ebene zwischen *JA* und *NEIN* darstellt. Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden. 
+  zur Klassiefizierung neuer Datensätz mit gleichen Maschinenparametern und gleicher Fragestellung, wie zuvor unter *KNN* erläutert. Anhand von Datensätzen wird eine *Logistischen Funktion* erzeugt, welche bezogen auf die Fragestellung eine Ebene zwischen *TRUE* oder *FALSE* darstellt. Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden. 
    Weitere Informationen zu *Logistic Regression* siehe https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html.
 - *Polynomial Logistic Regression*: wie *Logistic Regression* mit anderer Funktion mit anderer Ebene.
 - *Train Test Split*:
@@ -120,6 +120,9 @@ Mit dem Ausführungscode kann die Anwendung der ML-Methoden gestartet werden. Da
 Die einzelnen ML-Methoden können über die *Jupyter-Notebooks* im Ordner [notebooks](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/notebooks) nachvollzogen werden. Anaconda liefert die Anwendung *Jupyter* automatisch bei der installation mit. Einstieg in *Jupiter-Notebook* findet man im Tutorial unter folgendem Link: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/ 
 
 ### Datenbank-Tabellen_anlegen
+[tp_tab_db.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/source_code-tp/tp_tab_db.py)
+
+Die SQL-Datenbank *PraediktiveAnalysenTest*, die auf dem HTW FB4 Server erstellt wurde beinhaltet die beiden Tabellen *Maschinendaten_20181206* für die simulierten Maschinendaten und *predictions*. Der Code *tp_tab_db.py* dient dazu, die Tabellen neu aufzusetzen und jeweils die erste Zeile zu erstellen.
 
 ### Datenbank_lesen_schreiben 
 [tp_server.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_server.py)
@@ -156,7 +159,7 @@ Nachfolgend sind die notwendigen Installationen der Programme mit Link zum Downl
 |:------------:|:-------------------:|:---------------------:|
 |Python 3.7|Programmiersprache|https://www.anaconda.com/download/#windows|
 |Anaconda|am meisten verwendete Python Data Science Plattform|http://docs.anaconda.com/anaconda/install/windows/|
-|Bibliotheken|siehe File [Bibliotheken.md](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/Bibliotheken.md)
+|Bibliotheken|siehe File [Bibliotheken.md](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/Bibliotheken.md)|siehe File [Bibliotheken.md](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/Bibliotheken.md)|
 
 
 ## Start-Anwendung
