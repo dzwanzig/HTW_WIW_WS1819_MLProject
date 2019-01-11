@@ -52,7 +52,7 @@ Die Projektgruppe wurde in zwei Teams aufgeteilt: Team Prediction (tp) und Team 
 In Rahmen von weiteren Projekten der HTW Berlin können die zuvor beschriebenen Ergebnisse weiterentwickelt und für weitere Projekte verwendet genutzt. So könnten beispielsweise Daten von realen Maschinen implementiert und somit reale Analysen durchgeführt werden.
 
  
-![alt text](https://github.com/Hawky12/HTW_WIW_WS1819_MLProject/blob/master/Aufteilung%20der%20Teams.PNG?raw=true)
+![alt text](https://user-images.githubusercontent.com/44892210/51022749-5dcc1400-1585-11e9-9a18-1df52a0161fe.PNG)
 Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
 
 ## Source-Codes-TP
