@@ -1,6 +1,6 @@
 # Starten der Tabellen der Datenbank "PraediktiveAnalysenTest"
-# Tabelle 1: Maschinendaten_20181206
 
+# Tabelle 1: Maschinendaten_20181206
 CREATE TABLE [dbo].[Maschinendaten_20181206] (
     [ID]                  NVARCHAR (255) NULL,
     [Maschine]            NVARCHAR (255) NULL,
