@@ -1,6 +1,6 @@
 # Bibliotheken
 
-|**Name der Bibliothek**|**In welchem Code verwendet**|**Funktion**|**Falls noch nicht installiert, über *Anaconda > Environment* Bibliothek raussuchen und installieren in Anaconda, importieren aus**|
+|**Name der Bibliothek**|**In welchem Code verwendet**|**Funktion**|
 |:----------------------:|:----------------------:|:----------------------:|
 |matplotlib|tp_arima.py;tp_ml_tools.py|Datenvisualisierung|
 |pandas|tp_arima.py; tp_helper.py; tp_ml_tools.py; tp_server.py|Datenanalyse Tools|
