@@ -66,5 +66,5 @@ while True:
                 rul_write(df_lin_reg, rul_mittel*60, method="mittel", failure=fail)
     else:
           print("Kein Ausfall in den nächsten 25 Minuten zu erwarten!")
-      
-    wait(5)
+          wait(5)
+    
