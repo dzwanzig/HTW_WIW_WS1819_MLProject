@@ -79,7 +79,10 @@ Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche du
   ungeplante Wartung, ungeplanter Werkzeugwechsel, ungeplante Wartung, ungeplante Reinigung, sonstiger ungeplanter Grund
 - Systematische Fehler:
   - Fehler 1 (F001): zu hohe Temperatur
+  ![alt_text](https://user-images.githubusercontent.com/44892210/51023624-a08eeb80-1587-11e9-9c32-22ef31f5e627.png)
+  
   - Fehler 2 (F002): zu hoher Strombedarf
+  ![alt text](https://user-images.githubusercontent.com/44892210/51023426-324a2900-1587-11e9-9dc2-3ec48bbbd6dc.png)
  
 Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Unterschied zum Normalbetrieb, werden beim Testbetrieb häufiger Fehler erzeugt wodurch die Daten zu Testzwecken schneller ausgewertet werden können.
 
