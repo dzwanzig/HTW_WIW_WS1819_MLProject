@@ -1,5 +1,4 @@
 # HTW_WIW_WS1819_MLProject
-## Handling 
 ## Table of Contents  
 
 [**Project-Description**](#Project-Description)  
