@@ -2,39 +2,37 @@
 ## Handling 
 ## Table of Contents  
 
-[Project-Description](#Project-Description)  
+[**Project-Description**](#Project-Description)  
 
-[Source-Codes-TP](#Source-Codes-TP)
+[**Source-Codes-TP**](#Source-Codes-TP)
 
-[Simulationsdaten](#Simulationsdaten_1)
+[*Simulationsdaten*](#Simulationsdaten_1)
 
-[ML-Tools](#ML-Tools_4)
+[*ML-Tools*](#ML-Tools_4)
 
-[Ausführung-ML-Tools](#Ausführung-ML-Tools_4)
+[*Ausführung-ML-Tools*](#Ausführung-ML-Tools_4)
 
-[ARIMA](#ARIMA)
+[*Datenbanken*](#Datenbanken)
 
-[Datenbanken](#Datenbanken)
+[*Helper*](#Helper)
 
-[Helper](#Helper)
+[**Source-Codes-TA**](#Source-Codes-TA)
 
-[Source-Codes-TA](#Source-Codes-TA)
+[*OEE-Kennzahl*](#OEE-Kennzahl)
 
-[OEE-Kennzahl](#OEE-Kennzahl)
+[*Datenbank-Abruf*](#Datenbank-Abruf)
 
-[Datenbank-Abruf](#Datenbank-Abruf)
+[*Power-BI-Upload*](#Power-BI-Upload)
 
-[Power-BI-Upload](#Power-BI-Upload)
+[**Installation**](#Installation)
 
-[Installation](#Installation)
+[**Start-Anwendung**](#Start-Anwendung)
 
-[Start-Anwendung](#Start-Anwendung)
+[**Lizensierung**](#Lizensierung)
 
-[Lizensierung](#Lizensierung)
+[**Acknowledgments**](#Acknowledgments)
 
-[Acknowledgments](#Acknowledgments)
-
-[Kontaktinformationen](#Kontaktinformationen)
+[**Kontaktinformationen**](#Kontaktinformationen)
 
 <a name="headers"/>
 
