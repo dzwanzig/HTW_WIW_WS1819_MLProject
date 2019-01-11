@@ -95,7 +95,7 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
 -	*Linear Regression*:
   zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
   Dabei wird der niedrigere Zeitwert angegeben.
-- *ARIMA*(*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel)
+- *ARIMA* (*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel)
   
 
 - *KNN (K-Nearest Neighbors)*:
@@ -106,7 +106,7 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
   klassifiziert. 
 - *Logistic Regression*:
   zur Klassiefizierung neuer Datensätz mit gleichen Maschinenparametern und gleicher Fragestellung, wie zuvor unter *KNN* erläutert. Anhand von Datensätzen wird eine *Logistischen Funktion* erzeugt, welche bezogen auf die Fragestellung eine Ebene zwischen *JA* und *NEIN* darstellt. Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden.  
-- *Polynomial Logistic Regression*:
+- *Polynomial Logistic Regression*: wie *Logistic Regression* mit anderer Funktion mit anderer Ebene.
 - *Train Test Split*:
   zur Bewertung der Modelle anhand von Trainings- und Testdaten und der Ermittlung des Modelscores.
  
