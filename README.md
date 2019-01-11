@@ -149,10 +149,10 @@ OEE = Nutzungsgradfaktor * Qualitätsfaktor * Effizienzfaktor * 100
 
 
 
-## Installation
+## Installation-TP
 - Anaconda
 - Bibliotheken (siehe File *Bibliotheken*)
--
+- 
 - 
 
 
