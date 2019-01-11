@@ -235,7 +235,7 @@ def systematischerfehler_1():
 def choose_test():
     global absolviert
     random_choice = random.randrange(1, 100)
-    if random_choice < 50:
+    if random_choice < 2:
         systematischerfehler_2()
     else:
         systematischerfehler_1()
