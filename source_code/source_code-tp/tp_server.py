@@ -28,7 +28,7 @@ def get_latest(menge):
     return(df)
 
 
-def rul_write(df, rul, method="LinRegression", failure="not_defined"):
+def rul_write(df, rul, method, failure="not_defined"):
     """ rul_write stores the predicted useful life in the prediction table in the project database. \n
     df - Pandas DataFrame \n
     rul - remaining useful life in seconds as integer \n
@@ -44,7 +44,7 @@ def rul_write(df, rul, method="LinRegression", failure="not_defined"):
     last_timestamp = df['Timestamp']
     time = last_timestamp[0]
     rul_time = time + timedelta(seconds=rul)
-    new_row = tuple((str(id_new), time, str(method), "XL_400_1",
+    new_row = tuple((str(id_new), time, str(method), "ABC_01",
                      rul_time, str(failure), "5"))  # all elements in tuple have to be strings
     sql = "INSERT INTO Predictions VALUES (%d, %s, %s, %s, %s, %s, %s)"
     cursor.execute(sql, new_row)
