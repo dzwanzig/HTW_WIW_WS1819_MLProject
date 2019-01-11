@@ -120,6 +120,9 @@ Mit dem Ausführungscode kann die Anwendung der ML-Methoden gestartet werden. Da
 Die einzelnen ML-Methoden können über die *Jupyter-Notebooks* im Ordner [notebooks](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/notebooks) nachvollzogen werden. Anaconda liefert die Anwendung *Jupyter* automatisch bei der installation mit. Einstieg in *Jupiter-Notebook* findet man im Tutorial unter folgendem Link: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/ 
 
 ### Datenbank-Tabellen_anlegen
+[tp_tab_db.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/source_code-tp/tp_tab_db.py)
+
+Die SQL-Datenbank *PraediktiveAnalysenTest*, die auf dem HTW FB4 Server erstellt wurde beinhaltet die beiden Tabellen *Maschinendaten_20181206* für die simulierten Maschinendaten und *predictions*. Der Code *tp_tab_db.py* dient dazu, die Tabellen neu aufzusetzen und jeweils die erste Zeile zu erstellen.
 
 ### Datenbank_lesen_schreiben 
 [tp_server.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_server.py)
