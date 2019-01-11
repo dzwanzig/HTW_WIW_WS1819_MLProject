@@ -12,7 +12,12 @@ from tp_helper import del_sort_add, filter_data, wait
 from sklearn.linear_model import LogisticRegression
 import joblib
 import os
+from statsmodels.tsa.arima_model import ARIMA
+from sklearn.metrics import mean_squared_error, mean_squared_log_error
+import itertools
+import warnings
 
+warnings.filterwarnings("ignore")
 
 # Linear regression
 
@@ -137,6 +142,112 @@ def poly_log_reg_predict(df):
     p = model.predict(p)
     return(p)
 
+# ARIMA Methode
+
+
+def arimamodell(data):
+    try:
+        data = pd.DataFrame(data.loc[:, 'Leistungsaufnahme'])
+        # Forecastwert in Intervallen, gf * 0.5=Minuten
+        gf = 30
+
+        # Erstellung einer Liste mit möglichen p-d-q-Parametern von 0 bis 4
+        p = d = q = range(0, 4)
+        pdq = list(itertools.product(p, d, q))
+        # print(pdq)
+        # Definition von Listen für die weitere Verarbeitung
+        # aic für AIC-Parameter, paramlist für p-d-q-Parameter
+        aic = list()
+        paramlist = list()
+        aiclist = list()
+        # Definition der Parameterauswahl als Pandas DataFrame
+        parameterauswahl = pd.DataFrame()
+        # for-Schleife, die die p-d-q-Kombination aus der pdq-Liste testet
+        # Für jede Kombination wird der AIC-Wert ermittelt und in die aiclist geschrieben
+        for param in pdq:
+            try:
+                mod = ARIMA(data, order=param)
+                results = mod.fit()
+                #print('ARIMA{} - AIC:{}'.format(param, results.aic))
+                paramlist.append(param)
+                aiclist.append(abs(results.aic))
+            except:
+                continue
+        # Zusammenfügen der Parameterlisten mit den jeweiligen AIC-Werten in ein Array
+        parameterauswahl['paramlist'] = paramlist
+        parameterauswahl['aiclist'] = aiclist
+        # Identifikation und des niedrigsten (besten) AIC-Wertes
+        # Anschließend werden die Parameter in neue Variablen übertragen
+        aicminindex = parameterauswahl['aiclist'].idxmin()
+        parammin = parameterauswahl.at[aicminindex, 'paramlist']
+        pvaluemin = parammin[0]
+        dvaluemin = parammin[1]
+        qvaluemin = parammin[2]
+        # Definition fiktiver Grenzwerte
+        posGrenze = 25
+        negGrenze = 18
+        p = pvaluemin
+        d = dvaluemin
+        q = qvaluemin
+
+        # Berechnung der Arima-Prediction für existierende Werte
+        # Übertragen der reinen Werte in Variable X (besseres Handling)
+        X = data.values
+        # Aufsplitten der Werte in Trainings- und Testdaten
+        size = int(len(X) * 0.3)
+        train, test = X[0:size], X[size:len(X)]
+
+        history = [x for x in train]
+        # Definition der Predictions-Werte als Liste
+        predictions = list()
+        # Arima-Model als for-Schleife für existierende Werte,
+        # weil nur je ein Prediction-Schritt erstellt werden kann.
+        # Die jeweilige Prediction wird in der Liste angefügt, die Schleife berechnet
+        # dann von dem neuen Wert ausgehend.
+        for t in range(len(test)):
+            model = ARIMA(history, order=(int(p), int(d), int(q)))
+            model_fit = model.fit(disp=False)
+            output = model_fit.forecast()
+            yhat = output[0]
+            predictions.append(yhat)
+            obs = test[t]
+            history.append(obs)
+
+        # error = mean_squared_error(test, predictions)
+        aic = model_fit.aic
+
+        # Arima-Model für vorausgesagte Werte
+        # model1 = ARIMA(history, order=(int(p), int(d), int(q)))
+        model1 = ARIMA(X, order=(int(p), int(d), int(q)))
+        model_fit = model1.fit(disp=False)
+        forecast = model_fit.forecast(steps=int(gf))
+        forecastt = forecast[0]
+        forecastpd = pd.DataFrame(forecastt)
+
+        # Vorhersage Ausfallzeitpunkt
+        # Erstellung Pandas-Array mit Werten über Grenzwert
+        ausfallpos = forecastpd[forecastpd[0] >= posGrenze]
+        ausfallinpos = (int(gf)-(len(ausfallpos)))*0.5
+        # ausfallneg = forecastpd[forecastpd[0]<=negGrenze]
+
+        # ausfallinneg = (int(gf)-(len(ausfallneg)))*0.5
+
+        # Darstellung der Prediction-Linie
+        # Wandlung der predictions in PandasArray
+        predictionspd = pd.DataFrame(predictions)
+        # Anfügen der forecast-Werte an predictions
+        datapred = predictionspd.append(forecastpd, ignore_index=True)
+        plt.figure()
+        plt.plot(datapred, 'r--', color='red', linewidth=1.0)
+        plt.plot(datapred, 'r--', color='red', linewidth=1.0)
+        plt.axhline(y=posGrenze, color='darkblue', linewidth=1.0)
+        plt.axhline(y=negGrenze, color='darkblue', linewidth=1.0)
+        plt.xlabel('Zeit in Intervallen')
+        plt.ylabel('Leistungsaufnahme')
+
+        return (ausfallinpos)
+    except:
+        return ("fail")
 
 # train test split
 
