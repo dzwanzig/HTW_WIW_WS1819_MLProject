@@ -1,5 +1,0 @@
-notebook zusammenfassung
-
-name - aufgabe
-
-...

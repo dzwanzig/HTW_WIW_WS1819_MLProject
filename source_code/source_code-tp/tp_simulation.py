@@ -10,6 +10,7 @@ absolviert = 0
 # Verbindung mit Datenbank herstellen
 conn = pymssql.connect("pcs.f4.htw-berlin.de", "Masterprojekt",
                        "Masterprojekt", "PraediktiveAnalysenTest")
+
 cursor = conn.cursor()
 
 # letzten Datensatz abrufen
@@ -235,7 +236,7 @@ def systematischerfehler_1():
 def choose_test():
     global absolviert
     random_choice = random.randrange(1, 100)
-    if random_choice < 2:
+    if random_choice < 50:
         systematischerfehler_2()
     else:
         systematischerfehler_1()
