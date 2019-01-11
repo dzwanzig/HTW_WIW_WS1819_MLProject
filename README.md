@@ -150,10 +150,13 @@ OEE = Nutzungsgradfaktor * Qualitätsfaktor * Effizienzfaktor * 100
 
 
 ## Installation-TP
-- Anaconda
-- Bibliotheken (siehe File *Bibliotheken*)
-- 
-- 
+Nachfolgend sind die notwendigen Installationen der Programme mit Link zum Download aufgeführt:
+
+|Programm|Funktion|Download|
+|:------------:|:-------------------:|:---------------------:|
+|Python 3.7|Programmiersprache|https://www.anaconda.com/download/#windows|
+|Anaconda|am meisten verwendete Python Data Science Plattform|http://docs.anaconda.com/anaconda/install/windows/|
+|Bibliotheken|siehe File [Bibliotheken.md](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/Bibliotheken.md)
 
 
 ## Start-Anwendung
