@@ -95,7 +95,7 @@ Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machi
 -	*Linear Regression*:
   zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
   Dabei wird der niedrigere Zeitwert angegeben.
-  *ARIMA*(*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel)
+- *ARIMA*(*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel)
    Die *ARIMA*-Methode ist nicht, wie die anderen ML-Methoden im Code *tp_ml_tools.py* integriert.
 
 - *KNN (K-Nearest Neighbors)*:
