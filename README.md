@@ -53,7 +53,7 @@ In Rahmen von weiteren Projekten der HTW Berlin können die zuvor beschriebenen 
 
  
 ![alt text](https://user-images.githubusercontent.com/44892210/51022749-5dcc1400-1585-11e9-9a18-1df52a0161fe.PNG)
-Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams
+*Abb. 1: Aufgabenaufteilung und Schnittstellen der Projektteams*
 
 ## Source-Codes-TP
 ([source_code LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/source_code))
@@ -80,11 +80,11 @@ Die Werte der Parameter ändern sich analog zu festgelegten Szenarien, welche du
 - Systematische Fehler:
   - Fehler 1 (F001): zu hohe Temperatur
   ![alt_text](https://user-images.githubusercontent.com/44892210/51023624-a08eeb80-1587-11e9-9c32-22ef31f5e627.png)
-  Abb. 2: Simulationsfehler F001
+  *Abb. 2: Simulationsfehler F001*
   
   - Fehler 2 (F002): zu hoher Strombedarf
   ![alt text](https://user-images.githubusercontent.com/44892210/51023426-324a2900-1587-11e9-9dc2-3ec48bbbd6dc.png)
-  Abb. 3: Simulationsfehler F002
+  *Abb. 3: Simulationsfehler F002*
   
 Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Unterschied zum Normalbetrieb, werden beim Testbetrieb häufiger Fehler erzeugt wodurch die Daten zu Testzwecken schneller ausgewertet werden können.
 
