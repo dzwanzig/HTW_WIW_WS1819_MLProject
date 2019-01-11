@@ -12,7 +12,9 @@
 
 [*Ausführung-ML-Tools*](#Ausführung-ML-Tools_4)
 
-[*Datenbanken*](#Datenbanken)
+[*Datenbank-Tabellen_anlegen*](#Datenbank-Tabellen_anlegen)
+
+[*Datenbank_lesen_schreiben*](#Datenbank_lesen_schreiben)
 
 [*Helper*](#Helper)
 
@@ -118,7 +120,9 @@ Mit dem Ausführungscode kann die Anwendung der ML-Methoden gestartet werden. Da
 
 Die einzelnen ML-Methoden können über die *Jupyter-Notebooks* im Ordner [notebooks](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/notebooks) nachvollzogen werden. Anaconda liefert die Anwendung *Jupyter* automatisch bei der installation mit. Einstieg in *Jupiter-Notebook* findet man im Tutorial unter folgendem Link: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/ 
 
-### Datenbanken 
+### Datenbank-Tabellen_anlegen
+
+### Datenbank_lesen_schreiben 
 [tp_server.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_server.py)
 
 Wie im Abschnitt [Simulationsdaten_1](#Simulationsdaten_1) beschrieben, werden die simulierten Maschinendaten in die Datenbank *PraediktiveAnalysenTest* in der Tabelle *Maschinendaten_20181206* geschrieben. Mit dem Code *tp_server.py* werden die letzten 20 Datensätze gelesen und für die Anwendung der ML-Methoden sowie zur Visualisierung in der App verwendet. Weiterhin werden die durch ML-Methoden ermittelten prädiktiven Daten in die zweite Tabelle *predictions* geschrieben.
@@ -149,11 +153,13 @@ OEE = Nutzungsgradfaktor * Qualitätsfaktor * Effizienzfaktor * 100
 ## Installation
 - Anaconda
 - Bibliotheken (siehe File *Bibliotheken*)
+-
 - 
 
 
 ## Start-Anwendung
 ### Start-Anwendung-TP
+- Github 
 - Start Tabellen
 - Start Simulationsdaten
 - Start ML-Methoden
