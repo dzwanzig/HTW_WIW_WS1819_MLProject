@@ -119,6 +119,10 @@ Mit dem Ausführungscode kann die Anwendung der ML-Methoden gestartet werden. Da
 
 Die einzelnen ML-Methoden können über die *Jupyter-Notebooks* im Ordner [notebooks](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/notebooks) nachvollzogen werden. Anaconda liefert die Anwendung *Jupyter* automatisch bei der installation mit. Einstieg in *Jupiter-Notebook* findet man im Tutorial unter folgendem Link: https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/ 
 
+Der Programmablauf der start.py ist mittels der nachvollgenden Grafik vereinfacht dargestellt.
+![alt-text](https://user-images.githubusercontent.com/44399149/51070891-02fbf080-1649-11e9-92b6-a229c1fce39c.jpg)
+*Abb. X: vereinfachter Programmablauf*
+
 ### Datenbank-Tabellen_anlegen
 [tp_tab_db.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/source_code-tp/tp_tab_db.py)
 
