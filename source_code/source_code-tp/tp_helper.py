@@ -59,11 +59,11 @@ def del_sort_add(df):
                             'Lautstaerke', 'Temperatur', 'NaechsterAusfall', 'nFail']])
     # Nächster Ausfall in 20/50 Schritten
     df['nA20'] = df['NaechsterAusfall'] < 20
-    df['nA50'] = df['NaechsterAusfall'] < 50
+    df['nA40'] = df['NaechsterAusfall'] < 40
     return(df)
 
 def filter_data(df):
     df = df.query('Leistungsaufnahme > 18')
-    df = df.query('NaechsterAusfall < 100')
+    df = df.query('NaechsterAusfall < 300')
     df = df.query('Temperatur > 99')
     return(df)

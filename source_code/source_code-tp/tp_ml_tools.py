@@ -275,15 +275,16 @@ def scale_data(X_train):
 
 
 # create new models and scaler
-df = get_df()
-df = del_sort_add(df)
-df = filter_data(df)
+def create_models():
+    df = get_df()
+    df = del_sort_add(df)
+    df = filter_data(df)
 
-tts_plg = tts(df, aim="nFail_F001")
-poly_log_reg_model(tts_plg)
+    tts_plg = tts(df, aim="nFail_F001")
+    poly_log_reg_model(tts_plg)
 
-tts_lg = tts(df, aim="nA50")
-log_reg_model(tts_lg)
+    tts_lg = tts(df, aim="nA40")
+    log_reg_model(tts_lg)
 
-tts_knn = tts(df, aim="NaechsterAusfall")
-knn_model(tts_knn)
+    tts_knn = tts(df, aim="NaechsterAusfall")
+    knn_model(tts_knn)
