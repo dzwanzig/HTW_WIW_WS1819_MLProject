@@ -38,15 +38,15 @@
 <a name="headers"/>
 
 ## Project-Description
-Im Rahmen eines WIW-Projekts an der HTW-Berlin (Wintersemester 18/19), wurden die Themen *Predictive Maintenance* und *Machine Learning* behandelt. Ziel war es, ein gesamtheitliches Verständnis zu den Themen zu gewinnen und Machine Learning Methoden anzuwenden sowie einen App-Prototypen zu entwickeln. Das Projektergebnis ist eine programmierte Anwendung, die es ermöglicht:
+Im Rahmen eines WIW-Projekts an der HTW-Berlin (Wintersemester 18/19), wurden die Themen *Predictive Maintenance* und *Machine Learning* behandelt. Ziel war es, ein gesamtheitliches Verständnis zu den Themen zu gewinnen und Machine Learning Methoden anzuwenden sowie einen App-Prototypen zu entwickeln. Das Projektergebnis ist eine Sammlung von Skripten und einer BI-Anwendung, die es ermöglichen:
 
 - Maschinendaten zu simulieren und in einer SQL Server Datenbank bereitzustellen,
-- Maschinendaten aus der SQL Server Datenbank abzurufen und mit Machine Learning Mehthoden darzustellen,
+- Maschinendaten aus der SQL Server Datenbank abzurufen und mit Machine Learning Mehthoden auszuwerten,
 - den nächsten Leistungsausfall der Maschine zeitlich vorauszusagen,
 - OEE Daten (Overall Equipment Effectiveness) zu berechnen,
 - OEE Daten und die Voraussage des nächsten Leistungsausfalls in einer App zu visualisieren.
 
-Die Projektgruppe wurde in zwei Teams aufgeteilt: Team Prediction (tp) und Team App (ta).  Mithilfe der App, sollte ein Leistungsausfall einer Maschine vorhergesagt werden können. Aus Abbildung 1 geht hervor, welche Entwicklungen die Teams jeweils durchführten und wie die Maschinendaten von der Datengewinnung bis zur Visualisierung in der App verarbeitet werden. 
+Die Projektgruppe wurde in zwei Teams aufgeteilt: Team Prediction (tp) und Team App (ta).  Mithilfe der App, sollte ein anstehender Leistungsausfall und der wahrscheinlicehe Ausfallgrund einer (simulierten) Maschine vorhergesagt werden können. Aus Abbildung 1 geht hervor, welche Entwicklungen die Teams jeweils durchführten und wie die Maschinendaten von der Datengewinnung bis zur Visualisierung in der App verarbeitet werden. 
 
 In Rahmen von weiteren Projekten der HTW Berlin können die zuvor beschriebenen Ergebnisse weiterentwickelt und für weitere Projekte verwendet genutzt. So könnten beispielsweise Daten von realen Maschinen implementiert und somit reale Analysen durchgeführt werden.
 
@@ -57,7 +57,7 @@ In Rahmen von weiteren Projekten der HTW Berlin können die zuvor beschriebenen 
 ## Source-Codes-TP
 ([source_code LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/source_code))
 
-Im weiteren Verlauf dieses READMEs werden die im Repository unter *source_code* aufgeführten Codes erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Codefiles weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde. Die nachfolgenden Titel zu den Codes sind analog zur Übersicht der *Aufgabenaufteilung und Schnittstellen der Projektteams* (Abb. 1) nummeriert, um herleiten zu können, welcher Code für welche Aufgabe verwendet wird.
+Im weiteren Verlauf dieses READMEs werden die im Repository unter *source_code* aufgeführten Codes (Skripte) erläutert. Die Abkürzungen *tp* und *ta* zu beginn der Files weisen daruf hin, ob der Code vom *Team Predictive (tp)* oder *Team App (ta)* entwickelt wurde. Die nachfolgenden Titel zu den Codes sind analog zur Übersicht der *Aufgabenaufteilung und Schnittstellen der Projektteams* (Abb. 1) nummeriert, um herleiten zu können, welcher Code für welche Aufgabe verwendet wird.
 
 ### Simulationsdaten_1 
 [tp_simulation.py LINK](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_simulation.py)
@@ -91,22 +91,21 @@ Weiterhin kann man die Simulationsdaten im "Testbetrieb" ausführen. Im Untersch
 ### ML-Tools_4
 [tp_ml_tools.py](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/blob/master/source_code/tp_ml_tools.py)
 
-Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. Nachfolgend wird kurz beschrieben, wozu die angewandten ML-Methoden verwendet wurden. Genauere Erläuterungen findet man im *WIKI* unter [*Was ist Machine Learning*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/wiki/Was-ist-Maschine-learning%3F). Wie die ML-Methoden ausgeführt werden können, wird im nächsten Abschnitt [(Ausführung-ML-Tools_4)](#Ausführung-ML-Tools_4) beschrieben.
+Die aus der Simulation gewonnenen Maschinendaten können mit verschiedenen Machine Learning Mehtoden analysiert werden. In dem Projekt wurde sich auf die Anwendung weniger, leicht implementierbarer ML_Methoden konzentriert. Nachfolgend wird kurz beschrieben, wozu die angewandten ML-Methoden verwendet wurden. Genauere Erläuterungen findet man im *WIKI* unter [*Was ist Machine Learning*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/wiki/Was-ist-Maschine-learning%3F). Wie die ML-Methoden ausgeführt werden können, wird im nächsten Abschnitt [(Ausführung-ML-Tools_4)](#Ausführung-ML-Tools_4) beschrieben.
 -	*Linear Regression*:
-  zur Ermittlung der Dauer der Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" oder "Leistungsaufnahme".    
-  Dabei wird der niedrigere Zeitwert angegeben. Weitere Informationen zur *Linear Regression* siehe https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols.html.
+  zur Ermittlung der Dauer bis zur Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" (200) oder "Leistungsaufnahme" (25). Dabei wird der niedrigere Zeitwert angegeben. Die Modellbildung findet vor jeder Berechnung erneut statt und basiert auf den letzten 20 Messwerten. Weitere Informationen zur *Linear Regression* siehe https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols.html.
   
 - *ARIMA* (*A*uto*R*egressive *I*ntegrated *M*oving *A*verage *M*odel): 
-  Ermittlung der Leistungsaufnahme und Überschreitung des Grenzwertes. Weitere Informationen zur *ARIMA* siehe https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima_model.ARIMA.html.
+  zur Ermittlung der Dauer bis zur Überschreitung des jeweiligen Grenzwertes von den Parametern "Temperatur" (200) oder "Leistungsaufnahme" (25). Weitere Informationen zur *ARIMA* siehe https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima_model.ARIMA.html.
 
 - *KNN (K-Nearest Neighbors)*:
-  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, ob in den nächsten 50 Messschritten, beziehungsweise 25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze in *TRUE* oder *FALSE* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze werden anhand der bereits vorhandenen, klassifizierten Datensätze, die am nächsten liegen, ebenfalls als *TRUE* oder *FALSE* klassifiziert. Weitere Informationen zu *KNN* siehe https://scikit-learn.org/stable/modules/neighbors.html.
+  zur Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* anhand der *nächsten Nachbarn*. Mit der Fragestellung, in wie vielen Messchritten, beziehungsweise Minuten ein Leistungsausfall der Maschine stattfinden wird. Die Klassifizierung entspricht der Ausfallentfernung in halben Minuten.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) gespeichert. Neue Datensätze werden anhand der bereits vorhandenen, klassifizierten 3 Datensätze, die am nächsten liegen, klassifiziert. Weitere Informationen zu *KNN* siehe https://scikit-learn.org/stable/modules/neighbors.html.
 - *Logistic Regression*: 
-  zur Klassiefizierung neuer Datensätz mit gleichen Maschinenparametern und gleicher Fragestellung, wie zuvor unter *KNN* erläutert. Anhand von Datensätzen wird eine *Logistischen Funktion* erzeugt, welche bezogen auf die Fragestellung eine Ebene zwischen *TRUE* oder *FALSE* darstellt. Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden. 
+ zur Klassifizierung neuer Datensätze anhand *Leistungsaufnahme* und *Temperatur* mit der Fragestellung, ob in den nächsten 40/50 Messschritten, beziehungsweise 20/25 Minuten ein Leistungsausfall der Maschine stattfinden wird, werden die Datensätze in *TRUE* oder *FALSE* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*] Neue Datensätze können, je nachdem auf welcher Seite der Ebene sie liegen, entsprechend klassifiziert werden. 
    Weitere Informationen zu *Logistic Regression* siehe https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html.
-- *Polynomial Logistic Regression*: wie *Logistic Regression* mit anderer Funktion mit anderer Ebene.
+- *Polynomial Logistic Regression*: anhand Klassifizierung neuer Datensätze zu *Leistungsaufnahme* und *Temperatur* mit der Fragestellung, aus welchem Grund der nächste Leistungsausfall der Maschine stattfinden wird. Anhand der Frage: "Ist der Grund für den Ausfall eine Überschreitung der Leistungsgrenze?" werden die Datensätze in *TRUE* oder *FALSE* klassifiziert.  Das Modell wird einmalig aufgesetzt und in dem Ordner [*saved_models*]
 - *Train Test Split*:
-  zur Bewertung der Modelle anhand von Trainings- und Testdaten und der Ermittlung des Modelscores.
+  zur Aufteilung der historischen Daten anhand von Trainings- und Testdaten.
   Weitere Informationen zu *Train Test Split* siehe https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html.
  
  In Verbindung mit den Codes der zuvor genannten ML-Tools sind die Ordner [*saved_models*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/saved_models) und [*scalers*](https://github.com/dorianzwanzig/HTW_WIW_WS1819_MLProject/tree/master/scalers) zu betrachten.
